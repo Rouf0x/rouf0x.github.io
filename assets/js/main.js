@@ -16,4 +16,10 @@ function clickHandler() {
     }
 }
 
+function copyBTC() {
+    var copyText = "bc1qpqleweelsj4zgklh72hg2dfdvppqs6lr62t8nu"
+    navigator.clipboard.writeText(copyText);
+    alert("Copied the text: " + copyText);
+  }
+
 window.addEventListener('click', clickHandler);
