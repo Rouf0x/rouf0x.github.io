@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     onclick: {
                         enable: true,
-                        mode: "push"
+                        mode: "repulse"
                     },
                     resize: true
                 },
