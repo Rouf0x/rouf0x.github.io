@@ -1,97 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roufox's Portfolio</title>
-    <link rel="stylesheet" href="assets/css/portofolio.css">
+    <title>Roufox | Lua Scripter & Programmer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Roufox - Experienced Lua Scripter & Programmer with innovative projects">
+    <meta name="keywords" content="Lua, Programmer, Portfolio, Roufox, Roblox Developer, Game Programming">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="assets/images/profilePicture.png" alt="Roufox's Profile Picture" class="profile-pic">
-        <h1>Roufox</h1>
-        <h2>Lua Scripter & Programmer</h2>
-    </header>
-
-    <section class="about">
-        <h3>About Me</h3>
-        <hr>
-        <p>Greetings! My name is Roufox. I am an experienced Lua scripter with over four years of experience. Programming has always been my passion.</p>
-        <p>I love learning by coding crude representations of real-world concepts. Instead of just improving an existing design, I often reinvent the wheel to fully grasp its principles and mechanics.</p>
-    </section>
-
-    <section class="cando">
-        <h3>What I Can / Can't Do</h3>
-        <hr>
-        <div class="skills">
-            <div>
-                <h4>What I Can Do</h4>
-                <ul>
-                    <li>Work with DataStores, Webservers, and Roblox APIs</li>
-                    <li>Create Shop systems</li>
-                    <li>Code GUI elements</li>
-                    <li>Fix and optimize code</li>
-                    <li>Implement webserver/socket integrations</li>
-                    <li>Essentials (announcements, notifications, DMs, etc.)</li>
-                    <li>Physics constraints (drag, gravity, hinges, etc.)</li>
-                </ul>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="loading-spinner">
+                <div class="spinner-sector spinner-sector-red"></div>
+                <div class="spinner-sector spinner-sector-blue"></div>
+                <div class="spinner-sector spinner-sector-green"></div>
             </div>
-            <div>
-                <h4>What I Can't Do</h4>
-                <ul>
-                    <li>Advanced car systems</li>
-                    <li>FPS weapons</li>
-                    <li>Optimize/fix undocumented code</li>
-                </ul>
+            <span>Loading Portfolio...</span>
+        </div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Roufox</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resume" class="nav-link">Experience</a>
+                <a href="#portfolio" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="hero-title">
+                    <span class="title-gradient">Roufox</span>
+                </h1>
+                <div class="typewriter">
+                    <span class="typed-text"></span>
+                </div>
+                <p class="hero-subtitle">Creating new things everyday</p>
+            </div>
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                <a href="#portfolio" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Contact Me</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+            <div class="scroll-down" data-aos="fade-up" data-aos-delay="500">
+                <a href="#about" class="scroll-link">
+                    <span>Scroll Down</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="payments">
-        <h3>Payments</h3>
-        <hr>
-        <p>I currently only accept payments in Robux.</p>
-        <p>Prices vary based on task complexity and time required. Contact me for precise pricing.</p>
-        <p>Pricing is calculated based on current DevEx rates.</p>
-    </section>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Get to know the developer behind the code</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/profilePicture.png" alt="Roufox Profile Picture" class="profile-img">
+                        <div class="image-border-animation"></div>
+                        <div class="image-dots"></div>
+                    </div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left">
+                    <h3 class="about-title">Innovative Lua Programmer & Problem Solver</h3>
+                    <p class="about-description">
+                        My name is Roufox. I am an experienced Lua scripter with 4+ years of experience. Programming has always been my passion.
+                        I love learning by coding crude representations of real-world concepts. Instead of just improving an existing design.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Systems Thinking</h4>
+                                <p>I deconstruct problems to their fundamentals before building solutions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Creative Solutions</h4>
+                                <p>I approach challenges with unconventional thinking for unique results.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-progress">
+                        <h4 class="skills-title">My Skills</h4>
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Lua Scripting</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="100%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Problem Solving</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="85%"></div>
+                            </div>
+                        </div>
 
-    <section id="showcase">
-        <h3>Showcase / Past Works</h3>
-        <hr>
-        <div class="projects">
-            <div class="project">
-                <iframe class="video" src="https://www.youtube.com/embed/r-ZTpyXx9k4" allowfullscreen></iframe>
-                <h4>Roblox MIDI file parser</h4>
-                <p>A MIDI file parser for Roblox, inspired by piano games.</p>
-                <a href="https://www.roblox.com/games/6014012579/MIDI-Media-Player" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <iframe class="video" src="https://www.youtube.com/embed/3kPKU00F5ew" allowfullscreen></iframe>
-                <h4>Roblox inside of Roblox</h4>
-                <p>A viewport-based robot that interacts with the game world.</p>
-                <a href="https://www.roblox.com/games/12500637509/Roblox-inside-of-Roblox" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <iframe class="video" src="https://www.youtube.com/embed/L8rzKKRgOzA" allowfullscreen></iframe>
-                <h4>Terrain Generator</h4>
-                <p>A Perlin noise-based terrain generator for Roblox.</p>
-                <a href="https://www.roblox.com/games/9879231774/Terrain-Generator" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <iframe class="video" src="https://www.youtube.com/embed/gB1zjjEoNBM" allowfullscreen></iframe>
-                <h4>Player Joins Recorder</h4>
-                <p>A game that saves and displays every player who joins.</p>
-                <a href="https://www.roblox.com/games/7130152571/Project-PlayerDB" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <iframe class="video" src="https://www.youtube.com/embed/6kNPukv8Wnc" allowfullscreen></iframe>
-                <h4>AI Text-Based NPC</h4>
-                <p>An AI-powered NPC that can assist users with prompts.</p>
-                <a href="https://www.roblox.com/games/12454382179/ChatGP-2" target="_blank">View Project</a>
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>UI/UX Design</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="counter" data-target="4">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="counter" data-target="48">0</span>
+                        <span class="stat-suffix">M+</span>
+                        <p>Contributed Visits</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="counter" data-target="5">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p>Completed Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section resume-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My Experience</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Professional journey and notable projects</p>
+            </div>
+            
+            <div class="resume-timeline">
+                <div class="timeline-line" data-aos="fade-up"></div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">March 2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Infected Lands</h3>
+                        <h4 class="timeline-subtitle">Lead Lua Developer</h4>
+                        <p class="timeline-description">
+                            Currently working long-term for Infected Lands, leading the development of new updates and features.
+                            Responsible for implementing game mechanics, optimizing performance, and mentoring junior developers.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Lua</span>
+                            <span>Game Design</span>
+                            <span>Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">March 2025</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Dragging System</h3>
+                        <h4 class="timeline-subtitle">Custom System</h4>
+                        <p class="timeline-description">
+                            Made a custom dragging system with customized physics/properties
+                            that allowed players to drag objects and interact with them.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Physics</span>
+                            <span>Player Interaction</span>
+                            <span>Customization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">March 2025</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Daily Login Chest</h3>
+                        <h4 class="timeline-subtitle">Pet Hatchers [RNG🎲]</h4>
+                        <p class="timeline-description">
+                            Coded a chest that could be opened every 24 hours for players to receive a power up.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Datastores</span>
+                            <span>Player Interaction</span>
+                            <span>Timer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">March 2025</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Global Countdown System</h3>
+                        <h4 class="timeline-subtitle">Wait 5 Years</h4>
+                        <p class="timeline-description">
+                            Engineered a global countdown system where players could complete obbies and purchase dev products to lower
+                            the countdown. Implemented global leaderboards and player time tracking features.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Data Management</span>
+                            <span>Leaderboards</span>
+                            <span>Economy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">March 2025</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Custom Boss Battle System</h3>
+                        <h4 class="timeline-subtitle">3D Sprunki RP</h4>
+                        <p class="timeline-description">
+                            Developed a comprehensive boss battle system featuring health management, swipe attacks, player lives system,
+                            screen shake effects, and boss collapse mechanics when health is low.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Attack system</span>
+                            <span>SFX</span>
+                            <span>Game Mechanics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Client Vouches</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">What people say about working with me</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <!-- Testimonial items will be added here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Showcase of my best work and innovations</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="ai" data-aos="fade-up">
+                    <div class="portfolio-card">
+                        <div class="portfolio-media">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/6kNPukv8Wnc" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">AI Text-Based NPC</h3>
+                            <p class="portfolio-description">
+                                An AI-powered NPC that can assist users with prompts, providing dynamic and contextual responses
+                                within the game environment.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span>AI Integration</span>
+                                <span>Web Server Intergration</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/12454382179/ChatGP-2" target="_blank" class="portfolio-link">
+                                View Project <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="game" data-aos="fade-up">
+                    <div class="portfolio-card">
+                        <div class="portfolio-media">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/L8rzKKRgOzA" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Terrain Generator</h3>
+                            <p class="portfolio-description">
+                                A Perlin noise-based terrain generator for Roblox that creates realistic and varied landscapes
+                                with customizable parameters.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span>Procedural Generation</span>
+                                <span>Algorithms</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/9879231774/Terrain-Generator" target="_blank" class="portfolio-link">
+                                View Project <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="tool" data-aos="fade-up">
+                    <div class="portfolio-card">
+                        <div class="portfolio-media">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/r-ZTpyXx9k4" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Roblox MIDI Parser</h3>
+                            <p class="portfolio-description">
+                                A MIDI file parser for Roblox that converts music files into playable sequences, inspired by
+                                piano games with accurate note timing.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span>Music</span>
+                                <span>File Parsing</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/6014012579/MIDI-Media-Player" target="_blank" class="portfolio-link">
+                                View Project <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="game" data-aos="fade-up">
+                    <div class="portfolio-card">
+                        <div class="portfolio-media">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/3kPKU00F5ew" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Roblox in Roblox</h3>
+                            <p class="portfolio-description">
+                                A viewport-based robot that interacts with the game world, creating a unique meta-experience
+                                of playing Roblox within Roblox.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span>Technology</span>
+                                <span>Viewport</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/12500637509/Roblox-inside-of-Roblox" target="_blank" class="portfolio-link">
+                                View Project <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="tool" data-aos="fade-up">
+                    <div class="portfolio-card">
+                        <div class="portfolio-media">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/gB1zjjEoNBM" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Player Joins Recorder</h3>
+                            <p class="portfolio-description">
+                                A game that saves and displays every player who joins, creating a persistent record of visitors
+                                with timestamps and statistics.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span>Data Store</span>
+                                <span>UI/UX Designing</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/7130152571/Project-PlayerDB" target="_blank" class="portfolio-link">
+                                View Project <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Let's collaborate on something amazing</p>
+        </div>
+        
+        <div class="contact-content-centered"> <!-- Changed class name -->
+            <div class="contact-info" data-aos="fade-up"> <!-- Removed data-aos="fade-right" -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Discord</h3>
+                        <p>Roufox</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Roblox</h3>
+                        <p>Rouf0x</p>
+                        <a href="https://www.roblox.com/users/profile?username=Rouf0x" target="_blank" class="info-link">Visit Profile</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>roufox.contact@gmail.com</p>
+                        <a href="mailto:roufox.contact@gmail.com" class="info-link">Send Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">Roufox</a>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3 class="link-title">Navigation</h3>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#resume">Experience</a></li>
+                            <li><a href="#portfolio">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h3 class="link-title">Connect</h3>
+                        <ul>
+                            <li><a href="https://www.roblox.com/users/profile?username=Rouf0x" target="_blank">Roblox</a></li>
+                            <li><a href="https://github.com/Rouf0x" target="_blank">GitHub</a></li>
+                            <li><a href="https://x.com/Roufoxxx" target="_blank">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="year"></span> Roufox. All rights reserved.</p>
+                <div class="social-links">
+                    <a target="_blank" href="https://www.roblox.com/users/profile?username=Rouf0x" aria-label="Roblox"><i class="fa-solid fa-user"></i></a>
+                    <a target="_blank" href="https://github.com/Rouf0x" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://x.com/Roufoxxx" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="scripts.js"></script>
 </body>
 </html>
