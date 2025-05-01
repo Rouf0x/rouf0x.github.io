@@ -14,7 +14,7 @@ function playVideo() {
         console.debug("clicked");
 }
 function copyBTC() {
-    var copyText = "bc1qpqleweelsj4zgklh72hg2dfdvppqs6lr62t8nu"
+    var copyText = "bc1q34vxe80tt8zp8la3pr2dj4veamrkufhwu4lty2"
     navigator.clipboard.writeText(copyText);
     alert("Copied the text: " + copyText);
 }
